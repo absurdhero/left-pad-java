@@ -64,3 +64,8 @@ sbt:
 ```
 libraryDependencies += "net.raboof" % "left-pad" % "1.0-SNAPSHOT"
 ```
+
+
+## license
+
+Licensed under The Apache License, Version 2.0. See the LICENSE file.
