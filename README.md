@@ -40,3 +40,27 @@ object instance before calling the function. This makes it easy to mock.
 
 You can even use your favorite dependency injection framework to efficiently pass
 a configured LeftPad object throughout your code without impacting testability.
+
+## Adding to Your Project
+
+Clone this repository, run `mvn install`, and this project as a dependency.
+
+maven:
+```
+<dependency>
+    <groupId>net.raboof</groupId>
+    <artifactId>left-pad</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
+gradle:
+```
+compile 'net.raboof:left-pad:1.0-SNAPSHOT'
+```
+
+sbt:
+
+```
+libraryDependencies += "net.raboof" % "left-pad" % "1.0-SNAPSHOT"
+```
