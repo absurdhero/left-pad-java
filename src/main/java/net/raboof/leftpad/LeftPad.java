@@ -18,11 +18,9 @@ public class LeftPad implements Function<CharSequence, String> {
     public String apply(CharSequence inputString) {
         StringBuilder output = new StringBuilder();
 
-        int i = -1;
+        int len = length - Character.codePointCount(inputString, 0, inputString.length());
 
-        int len = length - inputString.length();
-
-        while (++i < len) {
+        for(int i = 0; i < len; i++) {
             output.append(fill);
         }
 

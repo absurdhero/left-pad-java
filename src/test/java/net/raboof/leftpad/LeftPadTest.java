@@ -42,6 +42,11 @@ public class LeftPadTest {
     }
 
     @Test
+    public void padToLength_whenMultiByteInput() {
+        assertEquals("X\uD83D\uDCA9\uD83D\uDCA9", new LeftPad(3, 'X').apply("\uD83D\uDCA9\uD83D\uDCA9"));
+    }
+
+    @Test
     public void modifyElementsInStream_whenPadded() {
         assertEquals(
                 asList(" x", " y", " z"),
