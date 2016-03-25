@@ -22,7 +22,7 @@ public class LeftPad implements Function<CharSequence, String> {
 
         int len = length - inputString.length();
 
-        while (i++ < len) {
+        while (++i < len) {
             output.append(fill);
         }
 
