@@ -13,7 +13,12 @@ and [jooq](http://jooq.org).
 
 ## Usage
 
-left-pad supports an advanced functional style whereby you define a new `LeftPad`
+At it's heart, left-pad is easy to use and simple to grasp.
+However, its interface is built on decades of programming language research.
+
+The simplest usage looks like `new LeftPad(length, character).apply(string)`.
+
+It also supports an advanced functional style whereby you define a new `LeftPad`
 [functor](https://en.wikipedia.org/wiki/Function_object)
 and apply it as a unary function which accepts a `CharSequence`.
 
@@ -28,3 +33,10 @@ fourPadded.apply("x");   // => "   x"
 // this will yield [" x", " y", " z"]
 asList("x", "y", "z").stream().map(new LeftPad(2)).collect(Collectors.toList())
 ```
+
+
+LeftPad also supports TDD practices since you always create a LeftPad
+object instance before calling the function. This makes it easy to mock.
+
+You can even use your favorite dependency injection framework to efficiently pass
+a configured LeftPad object throughout your code without impacting testability.
