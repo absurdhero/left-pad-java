@@ -15,19 +15,19 @@ public class LeftPad implements Function<CharSequence, String> {
         this(length, ' ');
     }
 
-    public String apply(CharSequence s) {
-        StringBuilder builder = new StringBuilder();
+    public String apply(CharSequence inputString) {
+        StringBuilder output = new StringBuilder();
 
         int i = -1;
 
-        int len = length- s.length();
+        int len = length - inputString.length();
 
-        while (++i < len) {
-            builder.append(fill);
+        while (i++ < len) {
+            output.append(fill);
         }
 
-        builder.append(s);
+        output.append(inputString);
 
-        return builder.toString();
+        return output.toString();
     }
 }
