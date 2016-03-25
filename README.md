@@ -1,5 +1,7 @@
 # left-pad for Java 8
 
+[![Build Status](https://travis-ci.org/absurdhero/left-pad-java.svg?branch=master)](https://travis-ci.org/absurdhero/left-pad-java)
+
 This is an implementation of the mission critical left-pad library
 with special support for Java 8's Functional paradigm.
 
