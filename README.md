@@ -2,20 +2,20 @@
 
 [![Build Status](https://travis-ci.org/absurdhero/left-pad-java.svg?branch=master)](https://travis-ci.org/absurdhero/left-pad-java)
 
-This is an implementation of the mission critical left-pad library
+This is an implementation of the left-pad library
 with special support for Java 8's Functional paradigm.
+It is lightweight and supports industrial usage thanks to its 100% test coverage
+and continuous integration.
 
-It has 100% test coverage and integrates works well with
-modern libraries like [Spring Data](http://projects.spring.io/spring-data/)
+It works well with modern libraries like
+[Spring Data](http://projects.spring.io/spring-data/)
 and [jooq](http://jooq.org).
 
+## Usage
 
-## usage
-
-left-pad supports an advanced functional style whereby you define a new LeftPad
+left-pad supports an advanced functional style whereby you define a new `LeftPad`
 [functor](https://en.wikipedia.org/wiki/Function_object)
-and apply it with a single free variable which represents your string
-(or any CharSequence type).
+and apply it as a unary function which accepts a `CharSequence`.
 
 Example:
 
